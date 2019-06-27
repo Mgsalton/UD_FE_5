@@ -82,7 +82,7 @@ nav h1 a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 10px 40px 16px;
+	padding: 25px 40px 16px;
     list-style: none;
     background-color: #eee;
 	font-size: 14pt;
@@ -326,3 +326,68 @@ nav h1 a {
 #restaurant-hours td {
   	color: #666;
 }
+
+/* ====================== Media Queries ======================
+*
+*	With thanks to:
+*	https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
+*
+* ============================================================*/
+
+@media screen and (max-width: 1045px) {
+  .restaurant-header {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .restaurant-header {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  #breadcrumb li {
+    font-size: 7pt;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #breadcrumb li {
+	letter-spacing: 0px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  #breadcrumb li {
+    font-size: 6pt;
+  }
+}
+
+
+@media screen and (max-width: 395px) {
+  #breadcrumb li {
+    font-size: 4pt;
+  }
+}
+
+/*
+* 320 width is the cut-off 
+*/
+
+/*
+@media screen and (max-width: 350px) {
+  .name {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .name {
+    font-size: 1.9em;
+  }
+  .job1, .job2 {
+    font-size: 0.7em;
+  }
+}
+*/
