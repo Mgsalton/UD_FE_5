@@ -1,52 +1,79 @@
 @charset "utf-8";
 /* CSS Document */
 
-body,td,th,p{
+body,
+td,
+th,
+p {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10pt;
 	color: #333;
 	line-height: 1.5;
 }
+
 body {
 	background-color: #fdfdfd;
 	margin: 0;
 	position:relative;
 }
-ul, li {
+
+ul,
+li {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10pt;
 	color: #333;
 }
+
 a {
 	color: orange;
 	text-decoration: none;
 }
+
 a:hover, a:focus {
 	color: #3397db;
 	text-decoration: none;
 }
+
 a img{
 	border: none 0px #fff;
 }
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   	font-family: Arial, Helvetica, sans-serif;
   	margin: 0 0 20px;
 }
-article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: flex;
 	justify-content: center;
 	/*display: block;*/
 }
+
 #maincontent {
   	background-color: #f3f3f3;
   	min-height: 100%;
 }
+
 #footer {
   	background-color: #444;
   	color: #aaa;
   	font-size: 8pt;
   	letter-spacing: 1px;
-  	padding: 25px;
   	text-align: center;
   	text-transform: uppercase;
 	height: auto;
@@ -62,18 +89,21 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 }
 
 /* ====================== Navigation ====================== */
-.restaurant-header {
+.restaurant-header-main,
+.restaurant-header-inside {
   	width: 100%;
   	height: 80px;
   	background-color: #252831;
   	text-align:center;
 }
 
-.header-text {
+.header-text-main,
+.header-text-inside {
   	margin: auto;
 }
 
-.header-text a {
+.header-text-main a,
+.header-text-inside a {
   	color: #fff;
   	font-size: 20pt;
   	font-weight: 200;
@@ -238,6 +268,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   	bottom: 0;
   	position: absolute;
   	width: 100%;
+	padding: 25px;
 }
 #restaurant-name,
 #restaurant-address {
@@ -339,7 +370,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 * ============================================================*/
 
 @media screen and (max-width: 1045px) {
-	.restaurant-header {
+	.restaurant-header-inside {
 		width: 70%;
   	}
 }
@@ -354,10 +385,10 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 	#restaurant-container {
 		padding: 100px 20px 30px;
 	}
-	.restaurant-header {
+	.restaurant-header-inside {
 		width: 50%;
   	}
-  	.header-text a,
+  	.header-text-inside a,
 	#restaurant-name,
 	#restaurant-cuisine,
 	#restaurant-address,
@@ -389,7 +420,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 	#breadcrumb li {
     	font-size: 7pt;
   	}
-  	.header-text a,
+  	.header-text-inside a,
 	#restaurant-name,
 	#restaurant-cuisine,
 	#restaurant-address,
@@ -409,7 +440,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 	#breadcrumb li {
 		letter-spacing: 0px;
   	}
-  	.header-text a {
+  	.header-text-inside a {
   		letter-spacing: 4px;
   	}
 	#reviews-container {
@@ -426,6 +457,12 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 	}
 }
 
+@media screen and (max-width: 520px) {
+	.header-text-main a {
+		font-size: 15pt;
+	}
+}
+
 @media screen and (max-width: 500px) {
 	#restaurant-hours td {
 		font-size: 6pt;
@@ -439,7 +476,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 	#breadcrumb li {
 		font-size: 6pt;
   	}
-	.header-text a,
+	.header-text-inside a,
 	#restaurant-name,
 	#restaurant-cuisine,
 	#restaurant-address {
@@ -460,6 +497,9 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 	#reviews-list p {
 		font-size: 7pt;
 	}
+	.header-text-main a {
+		font-size: 10pt;
+	}
 }
 
 @media screen and (max-width: 395px) {
@@ -475,6 +515,9 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 	#reviews-container {
 		padding: 30px 04px 80px;
   	}
+	.header-text-main a {
+		font-size: 8pt;
+	}
 }
 
 /*
