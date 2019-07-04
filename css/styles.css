@@ -69,13 +69,13 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   	text-align:center;
 }
 
-.title-text {
+.header-text {
   	margin: auto;
 }
 
-.title-text a {
+.header-text a {
   	color: #fff;
-  	font-size: 14pt;
+  	font-size: 20pt;
   	font-weight: 200;
   	letter-spacing: 10px;
   	text-transform: uppercase;
@@ -239,7 +239,8 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   	position: absolute;
   	width: 100%;
 }
-#restaurant-name {
+#restaurant-name,
+#restaurant-address {
   	color: #f18200;
   	font-family: Arial,sans-serif;
   	font-size: 20pt;
@@ -271,7 +272,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 #restaurant-container, #reviews-container {
   	border-bottom: 1px solid #d9d9d9;
   	border-top: 1px solid #fff;
-  	padding: 140px 40px 30px;
+  	padding: 100px 40px 30px;
   	width: 50%;
 	flex-direction: column;
 }
@@ -343,21 +344,64 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   	}
 }
 
+@media screen and (max-width: 1000px) {
+	#reviews-container {
+		padding: 30px 30px 80px;
+  	}
+}
+
 @media screen and (max-width: 860px) {
+	#restaurant-container {
+		padding: 100px 20px 30px;
+	}
 	.restaurant-header {
 		width: 50%;
   	}
-  	.title-text a {
+  	.header-text a,
+	#restaurant-name,
+	#restaurant-cuisine,
+	#restaurant-address,
+	#reviews-container h2 {
 		font-size: 10pt;
   	}
+	#reviews-container {
+		padding: 30px 20px 80px;
+	}
+	#reviews-container h2,
+	#restaurant-name {
+		text-align: center;
+    	font-weight: 200;
+    	letter-spacing: 5px;
+    	text-transform: uppercase;
+	}
+	#reviews-list h1 {
+		font-size: 14pt;
+	}
+	#reviews-list h3 {
+		font-size: 10pt;
+	}
+	#reviews-list p {
+		font-size: 9pt;
+	}
 }
 
 @media screen and (max-width: 720px) {
 	#breadcrumb li {
     	font-size: 7pt;
   	}
-  	.title-text a {
+  	.header-text a,
+	#restaurant-name,
+	#restaurant-cuisine,
+	#restaurant-address,
+	#restaurant-hours td,
+	#reviews-container h2 {
 		font-size: 8pt;
+  	}
+}
+
+@media screen and (max-width: 700px) {
+	#reviews-container {
+		padding: 30px 15px 80px;
   	}
 }
 
@@ -365,24 +409,71 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 	#breadcrumb li {
 		letter-spacing: 0px;
   	}
-  	.title-text a {
+  	.header-text a {
   		letter-spacing: 4px;
   	}
+	#reviews-container {
+		padding: 30px 10px 80px;
+	}
 }
 
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 570px) {
+	#restaurant-hours td {
+		font-size: 7pt;
+	}
+	#reviews-list p {
+		font-size: 8pt;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	#restaurant-hours td {
+		font-size: 6pt;
+	}
+	#footer p {
+		font-size: 7pt;
+	}
+}
+
+@media screen and (max-width: 460px) {
 	#breadcrumb li {
 		font-size: 6pt;
   	}
-	.title-text a {
+	.header-text a,
+	#restaurant-name,
+	#restaurant-cuisine,
+	#restaurant-address {
   		font-size: 7pt;
   	}
+	#reviews-container {
+		padding: 30px 05px 80px;
+	}
 }
 
+@media screen and (max-width: 445px) {
+	#restaurant-address {
+		font-size: 6pt;
+	}
+	#restaurant-hours td {
+		font-size: 5pt;
+	}
+	#reviews-list p {
+		font-size: 7pt;
+	}
+}
 
 @media screen and (max-width: 395px) {
 	#breadcrumb li {
     	font-size: 4pt;
+  	}
+	#footer p {
+		font-size: 5pt;
+	}
+}
+
+@media screen and (max-width: 370px) {
+	#reviews-container {
+		padding: 30px 04px 80px;
   	}
 }
 
