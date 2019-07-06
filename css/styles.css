@@ -213,9 +213,8 @@ section {
   	background-color: #ccc;
   	display: block;
   	margin: 0;
-  	max-width: 100%;
-  	min-height: 248px;
-  	min-width: 100%;
+	width: 100%;
+	height: auto;
 }
 #restaurants-list li h1 {
 	color: #f18200;
@@ -283,6 +282,7 @@ section {
 }
 #restaurant-img {
 	width: 90%;
+	height: auto;
 }
 #restaurant-address {
   	font-size: 12pt;
@@ -369,7 +369,7 @@ section {
 *
 * ============================================================*/
 
-@media screen and (max-width: 1045px) {
+@media screen and (max-width: 1150px) {
 	.restaurant-header-inside {
 		width: 70%;
   	}
@@ -381,7 +381,7 @@ section {
   	}
 }
 
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 950px) {
 	#restaurant-container {
 		padding: 100px 20px 30px;
 	}
@@ -416,7 +416,7 @@ section {
 	}
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 790px) {
 	#breadcrumb li {
     	font-size: 7pt;
   	}
@@ -436,7 +436,7 @@ section {
   	}
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
 	#breadcrumb li {
 		letter-spacing: 0px;
   	}
@@ -472,7 +472,7 @@ section {
 	}
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 475px) {
 	#breadcrumb li {
 		font-size: 6pt;
   	}
@@ -512,7 +512,7 @@ section {
 	}
 }
 
-@media screen and (max-width: 395px) {
+@media screen and (max-width: 430px) {
 	#breadcrumb li {
     	font-size: 4pt;
   	}
@@ -533,6 +533,9 @@ section {
 @media screen and (max-width: 320px) {
 	#restaurants-list li {
 		padding: 10px 05px 10px;
+	}
+	#breadcrumb li {
+		font-size: 3.7pt;
 	}
 	.filter-options select {
 		font-size: 6pt;
