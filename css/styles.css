@@ -542,24 +542,23 @@ section {
 	}
 }
 
+/* ====================== Accessibility ======================
+*
+* ============================================================*/
 
-/*
-* 320 width is the cut-off (iPhone 4)
-*/
-
-/*
-@media screen and (max-width: 350px) {
-  .name {
-    font-size: 1.5em;
-  }
+.skip-link-f,
+.skip-link-r {
+	position: absolute;
+	top: -40px;
+	left: 0;
+	background:orange;
+	color:blue;
+	font-weight: bold;
+	padding: 8px;
+	z-index: 100;
 }
 
-@media screen and (max-width: 390px) {
-  .name {
-    font-size: 1.9em;
-  }
-  .job1, .job2 {
-    font-size: 0.7em;
-  }
+.skip-link-f:focus,
+.skip-link-r:focus {
+	top: 0;
 }
-*/
