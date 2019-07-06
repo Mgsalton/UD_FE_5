@@ -300,7 +300,8 @@ section {
   	text-transform: uppercase;
 	width: 90%;
 }
-#restaurant-container, #reviews-container {
+#restaurant-container,
+ #reviews-container {
   	border-bottom: 1px solid #d9d9d9;
   	border-top: 1px solid #fff;
   	padding: 100px 40px 30px;
@@ -318,6 +319,17 @@ section {
   	padding-bottom: 1pt;
 	margin-bottom: 10px;
 }
+
+.reviewer {
+	color: #f58500;
+}
+
+.review-date,
+.review-score,
+.review-text {
+	color: #666;
+}
+
 #reviews-list {
   	margin: 0;
   	padding: 0;
@@ -334,28 +346,25 @@ section {
   	width: 85%;
 	border-radius: 25px;
 }
-#reviews-list li p, h1, h2, h3 {
+#reviews-list li, h2, h3, h4 {
   	margin: 5px 0px 0px;
 }
 
-#reviews-list h1 {
+#reviews-list h2 {
 	margin: 20px 0 0;
 	color: #f58500;
 	font-size: 18pt;
 	font-weight: 300;
 }
 
-#reviews-list h2 {
-	color: #333;
+#reviews-list h3 {
 	font-size: 14pt;
 	font-weight: 300;
 }
 
-#reviews-list h3 {
-	color: #333;
-	font-size: 14pt;
-	font-weight: 300;
-	margin: 0 0 20px;
+#reviews-list h4 {
+	font-size: 10pt;
+	margin: 20px 0 20px;
 }
 
 #restaurant-hours td {
@@ -411,7 +420,7 @@ section {
 	#reviews-list h3 {
 		font-size: 10pt;
 	}
-	#reviews-list p {
+	#reviews-list h4 {
 		font-size: 9pt;
 	}
 }
@@ -452,7 +461,7 @@ section {
 	#restaurant-hours td {
 		font-size: 7pt;
 	}
-	#reviews-list p {
+	#reviews-list h4 {
 		font-size: 8pt;
 	}
 }
@@ -494,7 +503,7 @@ section {
 	#restaurant-hours td {
 		font-size: 5pt;
 	}
-	#reviews-list p {
+	#reviews-list h4 {
 		font-size: 7pt;
 	}
 	.header-text-main a {
