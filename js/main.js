@@ -155,12 +155,66 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
 /**
  * Create restaurant HTML.
  */
+generateAltText = (restaurant) => {
+    let altText = '';
+    //console.log(restaurant);
+
+    if (restaurant.name == 'Mission Chinese Food') {
+        //console.log('Img 1 match');
+        altText = ('A fashionable asian restaurant');
+        return altText;
+    } else if (restaurant.name == 'Emily') {
+        //console.log('Img 2 match');
+        altText = ('A pizza cut in six slices');
+        return altText;
+    } else if (restaurant.name == 'Kang Ho Dong Baekjeong') {
+        //console.log('Img 3 match');
+        altText = ('A spacious asian restaurant');
+        return altText;
+    } else if (restaurant.name == 'Katz\'s Delicatessen') {
+        //console.log('Img 4 match');
+        altText = ('A trendy delicatessen at night');
+        return altText;
+    } else if (restaurant.name == 'Roberta\'s Pizza') {
+        //console.log('Img 5 match');
+        altText = ('A popular pizza kitchen');
+        return altText;
+    } else if (restaurant.name == 'Hometown BBQ') {
+        //console.log('Img 6 match');
+        altText = ('A popular BBQ kitchen');
+        return altText;
+    } else if (restaurant.name == 'Superiority Burger') {
+        //console.log('Img 7 match');
+        altText = ('A trendy burger joint');
+        return altText;
+    } else if (restaurant.name == 'The Dutch') {
+        //console.log('Img 8 match');
+        altText = ('An outside shot of a smart restaurant');
+        return altText;
+    } else if (restaurant.name == 'Mu Ramen') {
+        //console.log('Img 9 match');
+        altText = ('A modern and informal asian restaurant');
+        return altText;
+    } else if (restaurant.name == 'Casa Enrique') {
+        //console.log('Img 10 match');
+        altText = ('A clean and modern mexican restaurant');
+        return altText;
+    } else {
+        //console.log('No match!');
+        altText = ('Missing image')
+        return altText;
+    };
+};
+
 createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
+  image.alt = generateAltText(restaurant);
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  //image.alt = generateAltText(image.src, restaurant);
+  //image.alt = 'test';
   li.append(image);
 
   const name = document.createElement('h1');

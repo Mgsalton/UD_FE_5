@@ -79,6 +79,57 @@ fetchRestaurantFromURL = (callback) => {
 /**
  * Create restaurant HTML and add it to the webpage
  */
+createAltText = (name) => {
+    let altText = '';
+    //console.log(restaurant);
+
+    if (name == 'Mission Chinese Food') {
+        //console.log('Img 1 match');
+        altText = ('A fashionable asian restaurant');
+        return altText;
+    } else if (name == 'Emily') {
+        //console.log('Img 2 match');
+        altText = ('A pizza cut in six slices');
+        return altText;
+    } else if (name == 'Kang Ho Dong Baekjeong') {
+        //console.log('Img 3 match');
+        altText = ('A spacious asian restaurant');
+        return altText;
+    } else if (name == 'Katz\'s Delicatessen') {
+        //console.log('Img 4 match');
+        altText = ('A trendy delicatessen at night');
+        return altText;
+    } else if (name == 'Roberta\'s Pizza') {
+        //console.log('Img 5 match');
+        altText = ('A popular pizza kitchen');
+        return altText;
+    } else if (name == 'Hometown BBQ') {
+        //console.log('Img 6 match');
+        altText = ('A popular BBQ kitchen');
+        return altText;
+    } else if (name == 'Superiority Burger') {
+        //console.log('Img 7 match');
+        altText = ('A trendy burger joint');
+        return altText;
+    } else if (name == 'The Dutch') {
+        //console.log('Img 8 match');
+        altText = ('An outside shot of a smart restaurant');
+        return altText;
+    } else if (name == 'Mu Ramen') {
+        //console.log('Img 9 match');
+        altText = ('A modern and informal asian restaurant');
+        return altText;
+    } else if (name == 'Casa Enrique') {
+        //console.log('Img 10 match');
+        altText = ('A clean and modern mexican restaurant');
+        return altText;
+    } else {
+        //console.log('No match!');
+        altText = ('Missing image')
+        return altText;
+    };
+};
+
 fillRestaurantHTML = (restaurant = self.restaurant) => {
   const name = document.getElementById('restaurant-name');
   name.innerHTML = restaurant.name;
@@ -88,6 +139,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
 
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img'
+  image.alt = createAltText(name.innerHTML);
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
 
   const cuisine = document.getElementById('restaurant-cuisine');
