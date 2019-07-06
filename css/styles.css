@@ -189,14 +189,14 @@ section {
 /* ====================== Restaurant Listing ====================== */
 
 .restaurant-cards {
-	flex-direction: row;
+	flex-direction: column;
 }
 
 #restaurants-list {
   	background-color: #f3f3f3;
   	list-style: outside none none;
   	margin: 0;
-  	padding: 30px 15px 60px;
+  	padding: 0px 0px 0px;
   	text-align: center;
 }
 #restaurants-list li {
@@ -205,7 +205,7 @@ section {
   	font-family: Arial,sans-serif;
   	margin: 15px;
   	min-height: 380px;
-  	padding: 0 30px 25px;
+  	padding: 15px 15px 15px;
   	text-align: left;
   	width: 270px;
 }
@@ -500,6 +500,16 @@ section {
 	.header-text-main a {
 		font-size: 10pt;
 	}
+	.filter-options h2 {
+		font-size: 7pt;
+		margin: 0 05px;
+	}
+	.filter-options select {
+		font-size: 7pt;
+		margin: 05px;
+		padding: 0 10px;
+		width: 130px;
+	}
 }
 
 @media screen and (max-width: 395px) {
@@ -519,6 +529,16 @@ section {
 		font-size: 8pt;
 	}
 }
+
+@media screen and (max-width: 320px) {
+	#restaurants-list li {
+		padding: 10px 05px 10px;
+	}
+	.filter-options select {
+		font-size: 6pt;
+	}
+}
+
 
 /*
 * 320 width is the cut-off (iPhone 4)
