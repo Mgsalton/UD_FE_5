@@ -14,7 +14,7 @@
     <body>
         <header>
             <!-- Skip links for Accessibility -->
-            <a href="#neighborhoods-select" class="skip-link-f">Skip to filter</a>
+            <a href="#neighborhoods-select" class="skip-link-f" tabindex="0">Skip to filter</a>
             <a href="#restaurants-list" class="skip-link-r">Skip to restaurants</a>
             <!-- -->
             <nav class="restaurant-header-main">
@@ -26,25 +26,23 @@
 
         <main id="maincontent">
             <section id="map-container">
-                <div id="map"></div>
+                <div id="map" aria-label='this is a scrollable map'></div>
             </section>
             <section id="filter-results">
                 <div class="filter-options">
                     <h2>Filter Results</h2>
-                    <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
+                    <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()" aria-label='filter by all neighborhoods'>
                         <option value="all">All Neighborhoods</option>
                     </select>
-                    <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
+                    <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()" aria-label='filter by all cuisines'>
                         <option value="all">All Cuisines</option>
                     </select>
                 </div>
             </section>
             <section id="restaurants">
-                <article>
-                    <div class="restaurant-cards">
-                        <ul id="restaurants-list"></ul>
-                    </div>
-                </article>
+                <div class="restaurant-cards">
+                    <ul id="restaurants-list"></ul>
+                </div>
             </section>
         </main>
         <aside>

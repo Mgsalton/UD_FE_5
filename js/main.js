@@ -208,8 +208,10 @@ generateAltText = (restaurant) => {
 
 createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
+  li.setAttribute('tabindex', '0');
 
   const image = document.createElement('img');
+  image.setAttribute('tabindex', '-1');
   image.className = 'restaurant-img';
   image.alt = generateAltText(restaurant);
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
@@ -218,20 +220,26 @@ createRestaurantHTML = (restaurant) => {
   li.append(image);
 
   const name = document.createElement('h2');
+  name.setAttribute('tabindex', '-1');
   name.innerHTML = restaurant.name;
   li.append(name);
 
   const neighborhood = document.createElement('h3');
+  neighborhood.setAttribute('tabindex', '-1');
   neighborhood.innerHTML = restaurant.neighborhood;
   li.append(neighborhood);
 
   const address = document.createElement('h3');
+  address.setAttribute('tabindex', '-1');
   address.innerHTML = restaurant.address;
   li.append(address);
 
   const more = document.createElement('a');
+  more.setAttribute('role', 'button');
+  more.setAttribute('aria-label', 'view details');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
+
   li.append(more)
 
   return li
