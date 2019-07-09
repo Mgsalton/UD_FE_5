@@ -1,3 +1,9 @@
+
+/*
+With credit to the following YouTube video for guidance:
+https://www.youtube.com/watch?v=ksXwaWHCW6k
+*/
+
 const cacheVersion = 'v1';
 const cacheContents = [
     'index.html',
@@ -27,27 +33,6 @@ self.addEventListener('install', (event) => {
 
 self.addEventListener('fetch', (event) => {
     console.log('SW: fetching');
-    event.respondWith(fetch(event.request).catch(() => caches.match(event.request)));
+    event.respondWith(fetch(event.request)
+    .catch(() => caches.match(event.request)));
 });
-
-// This section of code will remove previous versions of the cache on each refresh
-
-/*self.addEventListener('activate', (event) => {
-    console.log('SW: activated');
-    event.waitUntil(
-        caches.keys().then(cacheVersion => {
-            return Promise.all(
-                cacheVersion.map(cache => {
-                    if(cache !== cacheVersion) {
-                        console.log('SW: clearing old cache');
-                        return caches.delete(cache);
-                    }
-                })
-            )
-        })
-    );
-})*/
-
-/*
-https://www.youtube.com/watch?v=ksXwaWHCW6k
-*/
