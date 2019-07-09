@@ -4,7 +4,7 @@
 */
 
     if ('serviceWorker' in navigator) {
-        console.log('SW is supported');
+        //console.log('SW is supported');
         window.addEventListener('load', () => {
             navigator.serviceWorker
                 .register('../sw_cache.js')
