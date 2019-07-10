@@ -19,7 +19,7 @@ const cacheContents = [
 // This section of the code caches the contents of 'cacheContents'
 
 self.addEventListener('install', (event) => {
-    //console.log('SW: installed');
+    console.log('SW: installed');
     event.waitUntil(
         caches
         .open(cacheVersion)
@@ -31,8 +31,21 @@ self.addEventListener('install', (event) => {
     );
 })
 
+/* old code that that threw an error
+
 self.addEventListener('fetch', (event) => {
     //console.log('SW: fetching');
     event.respondWith(fetch(event.request)
     .catch(() => caches.match(event.request)));
+});
+
+*/
+
+self.addEventListener('fetch', function(event) {
+    console.log('SW: fetching')
+    event.respondWith(
+    fetch(event.request).catch(function() {
+      return caches.match(event.request);
+    })
+  );
 });
