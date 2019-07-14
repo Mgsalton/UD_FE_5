@@ -1,19 +1,3 @@
-
-/*
-    Service worker backup
-
-
-    if ('serviceWorker' in navigator) {
-        //console.log('SW is supported');
-        window.addEventListener('load', () => {
-            navigator.serviceWorker
-                .register('../sw_cache.js')
-                .then(reg => console.log('SW registered'))
-                .catch(err => console.log(`SW Error: ${err}`))
-        });
-    };
-*/
-
 /**
  * Common database helper functions.
  */
