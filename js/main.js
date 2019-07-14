@@ -4,6 +4,21 @@ let restaurants,
 var newMap
 var markers = []
 
+/*
+Service Worker
+Credit: https://developers.google.com/web/fundamentals/primers/service-workers/
+*/
+
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw_cache.js').then(function(registration) {
+            console.log('SW registration with scope: ', registration.scope);
+        }, function(err) {
+            console.log('SW registration failed: ', err);
+        });
+    });
+}
+
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */

@@ -1,7 +1,7 @@
 
 /*
-    Service worker
-*/
+    Service worker backup
+
 
     if ('serviceWorker' in navigator) {
         //console.log('SW is supported');
@@ -12,6 +12,7 @@
                 .catch(err => console.log(`SW Error: ${err}`))
         });
     };
+*/
 
 /**
  * Common database helper functions.
